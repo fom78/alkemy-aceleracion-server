@@ -1,0 +1,22 @@
+@host = {{$dotenv SERVER_HOST}}
+
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+
+### Get all contacts
+GET {{host}}contacts
+x-access-token: {{token}}
+
+### Add a contact
+POST {{host}}contacts
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name" : "John Doe",
+  "email" : "hola@gmail.com",
+  "phone" : "123456789",
+  "message" : "Hola"
+}

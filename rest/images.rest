@@ -1,0 +1,18 @@
+@host = {{$dotenv SERVER_HOST}}
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+
+### subir una imagen
+POST {{host}}images
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+ 
+{
+  "file":"C:/imgtest/imgtestv2.jpg"
+}
+
+### Get an image
+GET {{host}}images/1652302378369-tmp-1-1652302378349
+x-access-token: {{token}}

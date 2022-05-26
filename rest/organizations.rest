@@ -1,0 +1,26 @@
+@host = {{$dotenv SERVER_HOST}}
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+### Get an organization
+GET {{host}}organization/1
+x-access-token: {{token}}
+
+### Create an organization
+POST {{host}}organization
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Organization name"
+}
+
+### Update an organization
+PUT {{host}}members/1
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Somos Mas !!!!"
+}

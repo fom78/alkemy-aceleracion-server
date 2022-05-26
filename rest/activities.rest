@@ -1,0 +1,36 @@
+@host = {{$dotenv SERVER_HOST}}
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+### Create an activity
+POST {{host}}activities
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Actividad Agregadaq",
+  "content": "Contenido Agregado"
+}
+
+### Update an activitiy
+PATCH  {{host}}activities/3
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Actividad editada",
+  "content": "Contenido editado"
+}
+
+### Get all activities
+GET {{host}}activities
+Content-Type: {{contentType}}
+
+### Get an activity
+GET {{host}}activities/99
+Content-Type: {{contentType}}
+
+### Update an activitiy
+DELETE   {{host}}activities/76
+x-access-token: {{token}}

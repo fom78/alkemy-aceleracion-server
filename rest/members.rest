@@ -1,0 +1,37 @@
+@host = {{$dotenv SERVER_HOST}}
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+### Get all members
+GET {{host}}members
+x-access-token: {{token}}
+
+### Create a member
+POST {{host}}members
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Fernandoaqqq",
+  "description": "Fake kjfkjdjfvs",
+  "image": "https://www.fom78.com.ar/img/category/github.svg"
+}
+
+### Update a member
+PATCH  {{host}}members/11
+x-access-token: {{token}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Fernando Omar"
+}
+
+### Get an member
+GET {{host}}members/1
+Content-Type: {{contentType}}
+
+
+### Update an member
+DELETE   {{host}}members/12
+x-access-token: {{token}}

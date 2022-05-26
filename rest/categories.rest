@@ -1,0 +1,34 @@
+@host = {{$dotenv SERVER_HOST}}
+@token = {{$dotenv TOKEN_TEST}}
+
+@contentType = application/json
+
+### Create a categorie
+POST {{host}}categories
+Content-Type: {{contentType}}
+ 
+{
+  "name":"CategoriaTestq",
+  "description":"Descripcion Categoria 01"
+}
+
+### Get all categories
+GET {{host}}categories
+Content-Type: {{contentType}}
+
+### Get a category
+GET {{host}}categories/20
+Content-Type: {{contentType}}
+
+### Delete a category
+DELETE {{host}}categories/44
+Content-Type: {{contentType}}
+
+### Edit a category
+PATCH  {{host}}categories/20
+Content-Type: {{contentType}}
+
+{
+  "name":"AAAq",
+  "description":"Descripcion Categoria"
+}
