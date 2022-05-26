@@ -1,5 +1,25 @@
 # Server Base - Proyecto ONG
 
+## Informacion
+
+API que brinda endpoints para el proyecto de la ONG Somos mas, ejercicio para la aceleracion de Alkemy, realizado por el equipo que se denomino **Los Inquietos** formado por:
+- [Manuel Latorre](https://github.com/ManuelLatorre98)
+- [Nicolas Borzone](https://github.com/nhoga)
+- [Fernando Masino](https://github.com/fom78)
+<hr />
+Repositorios originales de trabajo, alli pueden ver todos los commits, PR y el avance.:
+
+- [Frontend](https://github.com/alkemyTech/OT172-client-js)
+- [Backend](https://github.com/alkemyTech/OT172-server)
+
+A tener en cuenta, para el fin de poder desplegar la API en heroku, se decidio cambiar la base de datos mySQL por una Postgress, ya que en heroku se puede usar el addOns de manera free.
+
+<hr />
+El proyecto se documento con Swagger y se puede acceder a la misma:
+
+[Documentacion](https://somos-mas-ong-172.herokuapp.com/docs/)
+
+[Repositorio del frontend](https://github.com/fom78/alkemy-aceleracion-cliente)
 
 ## Envinroment setup
 
@@ -29,44 +49,6 @@ npm start
 
 ## Seeders
 
-### Admin Users
- firstName | lastName | email           | password    | roleId | image |
----------- | -------- |--------------   |----------   |--------|-------|
- Alina    | Murillo   | alina@mail.com | A.alina123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Patricio    | Zapata   | patricio@mail.com | A.patricio123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Santiago    | Puertas   | santiago@mail.com | A.santi123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Arnau    | Montes   | arnau@mail.com | A.arnau123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Brenda    | Saez   | brenda@mail.com | A.brenda123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Silvia    | Lopez   | silviaLopez@mail.com | A.silvia123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Anton    | Travis   | anton@mail.com | A.anton123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- John    | Lemon   | johnLemon@mail.com | A.john123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Ted    | Buck   | ted@mail.com | A.ted123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Courtney    | Clark   |courtney@mail.com | A.courtney123 |   1    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-
-### Standard Users
- firstName | lastName | email           | password    | roleId | image |
----------- | -------- |--------------   |----------   |--------|-------|
- Wilton    | Ashley   | wilton@mail.com | A.wilton123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
- Carlo    | Suarez   | carlo@mail.com | A.carlo123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Edwin    | Barton   | edwin@mail.com | A.edwin123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Selena    | Blair   | selena@mail.com | A.selena123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Connie    | Jefferson   | connie@mail.com | A.connie123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Silvia    | Pardo   | silvia@mail.com | A.silvia123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Noemi    | Galloway   | noemi@mail.com | A.noemi123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  John    | Pruitt   | john@mail.com | A.john123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Federico    | Velez   | federico@mail.com | A.federico123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-  Lisa    | French   | lisa@mail.com | A.lisa123 |   2    |https://www.designevo.com/res/templates/thumb_small/colorful-hand-and-warm-community.png
-
-
-
-## Routes 
-
-AUTH
-
-Register 
-route = '/auth/register'. 
-body = {firstName, lastName, email, password(at least one uppercase, one lowercase, one number, in a range of 8 to 20)}
-
 
 ## Migraciones
 - Crear el esqueleto para un modelo
@@ -81,5 +63,3 @@ Y luego crear dentro la estrucura correspondiente.
 npx sequelize-cli seed:generate --name create-data-model
 ```
 y dentro del esqueleto que crea llenar con datos de pruebas.
-
-npx jest --detectOpenHandles ./test/users.test.js
